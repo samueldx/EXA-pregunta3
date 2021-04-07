@@ -1,0 +1,42 @@
+#PREGUNTA 3 
+
+@author: A-SAMUEL
+"""
+#ALGORITMO DE PREPROCEZAMIENTO DE NORMALIZACION
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import preprocessing
+
+datos = pd.read_csv("C:\\Users\\A-SAMUEL\\Desktop\\Dummy Data HSS.csv")
+
+df=pd.DataFrame(datos)
+
+x=df.iloc[:,:3 ]
+
+print(x)
+xprepro=preprocessing.normalize(x)
+
+print(xprepro)
+
+##########
+#ALGORITMO DE PREPROCEZAMIENTO  SCALADO
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import preprocessing
+
+datos = pd.read_csv("C:\\Users\\A-SAMUEL\\Desktop\\Dummy Data HSS.csv")
+
+df=pd.DataFrame(datos)
+
+x=df.iloc[:,:3 ]
+
+print(x)
+xprepro=preprocessing.scale(x)
+
+print(xprepro)
